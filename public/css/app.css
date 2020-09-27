@@ -1,0 +1,48 @@
+:root{
+    --text-color: black;
+    --first-theme-color: #85f78b8a;
+    --body-background: rgb(228, 228, 228);
+    --background-color: white;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --boxColor: white;
+  }
+  .dark-mode{
+    --text-color: white;
+    --first-theme-color: #85f78b8a;
+    --body-background: #1e222b;
+    --background-color: black;
+    --shadow: rgba(255, 255, 255, 0.2);
+    --boxColor: #323a4b;
+}
+body{
+    background-color: var(--background-color);
+}
+html, 
+body {
+    height: 100%;
+}
+.dark-light {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: var(--background-color);
+    box-shadow: -1px 3px 8px -1px var(--shadow);
+    padding: 8px;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+}
+.dark-light svg {
+    width: 28px;
+}
+
+.dark-mode .dark-light svg {
+    fill: #ffce45;
+    stroke: #ffce45;
+}
+
+.dark-light svg {
+    fill: transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
