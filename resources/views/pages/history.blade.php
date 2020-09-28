@@ -8,15 +8,13 @@
         <table id="historyTable" class="table table-striped table-bordered" cellspacing="0" width="100%" border="0">
             <thead>
                 <tr>
-                    <th width="30%">Username</th>
-                    <th width="40%">Search Query</th>
-                    <th width="30%">Search Time</th>
+                    <th width="60%">Search Query</th>
+                    <th width="40%">Search Time</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($histories as $history)
                     <tr>
-                        <td>{{$history->user->name}}</td>
                         <td>{{$history->q}}</td>
                         <td>{{$history->created_at}} ({{$history->created_at->diffForHumans()}})</td>
                     </tr>
